@@ -32,7 +32,7 @@ ssize_t recvNonBlocking(int sockfd, void *buf, size_t len, int flags, struct tim
     /*ready to read*/
     else
     {
-        bytesrec = recv(sockfd, (char *)buf, len, flags); /*PRQA S 0315 # Justification: Message could not be solved with a cast  (void*), as this creates message 314 */
+        bytesrec = recv(sockfd, (char *)buf, len, flags);
     }
 
     if(timeout_flag != NULL){
