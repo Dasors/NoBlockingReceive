@@ -5,22 +5,7 @@
 #include <sys/socket.h>
 #include <sys/select.h>
 
-/*----------------------------------------------------------------------------------------------------------------------------*/
-/*     FUNCTION: recvNonBlocking
- */
-/*!    \brief    It allows to receive data (recv()) as a NonBlocking function. A timeout can be set
- *
- *     \param    sockfd                        - The descriptor for the socket
- *     \param    buf                           - A pointer to a buffer where the function can store the message.
- *     \param    len                           - The size of the buffer
- *     \param    flags                         - A combination formed by ORing one or more of the values
- *     \param    timeout                       - The timeout value
- *     \param    timeout_flag                  - A flag that is set when the timeout is reached
- *
- *
- *     \returns  bytesrec                      - The number of bytes sent, or -1 if an error occurs
- *//*-------------------------------------------------------------------------------------------------------------------------*/
-static ssize_t recvNonBlocking(int sockfd, void *buf, size_t len, int flags, struct timeval timeout, bool *timeout_flag)
+ssize_t recvNonBlocking(int sockfd, void *buf, size_t len, int flags, struct timeval timeout, bool *timeout_flag)
 {
     ssize_t bytesrec=0;
     bool timeout_tmp = false;
