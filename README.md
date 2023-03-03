@@ -1,4 +1,4 @@
-# NoBlockingReceive
+# NBlockingReceive
 
 It allows to receive data (recv()) as a NonBlocking function. A timeout can be set
 
@@ -8,7 +8,7 @@ Synopsis:
 #include <sys/socket.h>
 #include <sys/select.h>
 
-ssize_t recvNonBlocking(int sockfd,
+ssize_t recvNBlocking(int sockfd,
                         void *buf,
                         size_t len,
                         int flags,
