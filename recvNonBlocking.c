@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <sys/select.h>
 
-ssize_t recvNonBlocking(int sockfd, void *buf, size_t len, int flags, struct timeval timeout, bool *timeout_flag)
+ssize_t recvNBlocking(int sockfd, void *buf, size_t len, int flags, struct timeval timeout, bool *timeout_flag)
 {
     ssize_t bytesrec=0;
     bool timeout_tmp = false;
