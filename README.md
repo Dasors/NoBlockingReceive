@@ -1,7 +1,9 @@
 # NoBlockingReceive
+
 It allows to receive data (recv()) as a NonBlocking function. A timeout can be set
 
 Synopsis:
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/select.h>
